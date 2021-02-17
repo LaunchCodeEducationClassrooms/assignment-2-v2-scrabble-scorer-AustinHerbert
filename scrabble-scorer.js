@@ -86,7 +86,7 @@ let vowelBonusScore = function(word){
 	return Number(letterPoints);
 }
 
-let scrabbleScore;
+// let scrabbleScore;
 
 let simpleScoreObj = {
   name: 'Simple Score',
@@ -103,7 +103,7 @@ let vowelBonusScoreObj = {
 let scrabbleObj = {
   name: 'Scrabble',
   description: "The traditional scoring algorithm.",
-  scoreFunction: scrabbleScorer
+  scoreFunction: scrabbleScore
 };
 
 const scoringAlgorithms = [simpleScoreObj,vowelBonusScoreObj,scrabbleObj];
@@ -136,7 +136,7 @@ function scorerPrompt() {
 
   } else if (playersAlgoSelection == 2){
     console.log(`Score for '${playersWord}''`)
-    return scrabbleScorer(playersWord);
+    return scrabbleScore(playersWord);
   }
 }
 
@@ -175,7 +175,7 @@ let newPointStructure = transform(oldPointStructure);
 newPointStructure[" "] = 0;
 
 
-function scrabbleScorer(word) {
+function scrabbleScore(word) {
 
 	word = word.toLowerCase();
 	let letterPoints = "";
@@ -213,7 +213,7 @@ module.exports = {
    oldPointStructure: oldPointStructure,
    simpleScore: simpleScore,
    vowelBonusScore: vowelBonusScore,
-   scrabbleScorer: scrabbleScorer,
+   scrabbleScore: scrabbleScore,
    scoringAlgorithms: scoringAlgorithms,
    newPointStructure: newPointStructure,
 	runProgram: runProgram,
