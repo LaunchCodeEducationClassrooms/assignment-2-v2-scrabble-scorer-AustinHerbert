@@ -55,7 +55,8 @@ function simpleScore(word){
   }
   console.log(letterPoints);
   console.log(totalPoints);
-  return Number(letterPoints);
+  console.log(typeof totalPoints)
+  return totalPoints;
 };
 
 const vowelPointStructure = {
@@ -83,7 +84,7 @@ let vowelBonusScore = function(word){
 	}
   console.log(letterPoints);
   console.log(totalPoints);
-	return Number(letterPoints);
+	return totalPoints;
 }
 
 // let scrabbleScore;
@@ -196,7 +197,7 @@ function scrabbleScore(word) {
  
   console.log(letterPoints)
   console.log(totalPoints)
-	return letterPoints;
+	return totalPoints;
  }
 
 function runProgram() {
