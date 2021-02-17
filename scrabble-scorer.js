@@ -55,7 +55,7 @@ function simpleScore(word){
   }
   console.log(letterPoints);
   console.log(totalPoints);
-  return letterPoints;
+  return Number(letterPoints);
 };
 
 const vowelPointStructure = {
@@ -83,7 +83,7 @@ let vowelBonusScore = function(word){
 	}
   console.log(letterPoints);
   console.log(totalPoints);
-	return letterPoints;
+	return Number(letterPoints);
 }
 
 let scrabbleScore;
@@ -213,7 +213,7 @@ module.exports = {
    oldPointStructure: oldPointStructure,
    simpleScore: simpleScore,
    vowelBonusScore: vowelBonusScore,
-   scrabbleScore: scrabbleScore,
+   scrabbleScorer: scrabbleScorer,
    scoringAlgorithms: scoringAlgorithms,
    newPointStructure: newPointStructure,
 	runProgram: runProgram,
